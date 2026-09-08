@@ -596,7 +596,10 @@ body {
 
 .go-kart-card,
 .atv-card,
-.paint-ball-card {
+.paint-ball-card,
+.archery-card,
+.buggy-card,
+.rope-card {
     background-size: 100%;
 
     transition: 
@@ -606,7 +609,10 @@ body {
 
 .go-kart-card:hover,
 .atv-card:hover,
-.paint-ball-card:hover {
+.paint-ball-card:hover,
+.archery-card:hover,
+.buggy-card:hover,
+.rope-card:hover {
     background-size: 135%;
     transform: translate(-8px);
 }
@@ -849,4 +855,354 @@ body {
 .activity-card a:hover {
     color: white;
     transform: translateX(8px);
+}
+
+/* ================================
+   EXPERIENCE STATS
+================================ */
+
+.experience-stats {
+    margin-top: 70px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.stat-item {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-right: 1px solid #333;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-number {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #f39c12;
+
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.stat-label {
+    display: block;
+
+    color: #bdbdbd;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+
+/* ================================
+   EXPERIENCE STATS HOVER
+================================ */
+
+.stat-item {
+    transition: 0.3s;
+}
+
+.stat-item:hover {
+    background-color: #1a1a1a;
+}
+
+.stat-item:hover .stat-number {
+    transform: scale(1.08);
+}
+
+.stat-number {
+    transition: transform 0.3s ease;
+}
+
+
+/* ================================
+   EXPERIENCE STATS MOBILE
+================================ */
+
+@media (max-width: 900px) {
+
+    .experience-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .stat-item:nth-child(1),
+    .stat-item:nth-child(2) {
+        border-bottom: 1px solid #333;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .experience-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+}
+
+/* ================================
+   FOOD & DINING SECTION
+================================ */
+
+.food-section {
+    padding: 120px 50px;
+
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+.food-container {
+    width: 100%;
+    min-height: 600px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("../images/food.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.food-content {
+    max-width: 650px;
+
+    padding: 70px;
+    color: white;
+
+    position: relative;
+    z-index: 2;
+}
+
+.food-content h2 {
+    margin-bottom: 25px;
+
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.food-content h2 span {
+    display: block;
+    color: #f39c12;
+}
+
+.food-description {
+    max-width: 600px;
+
+    margin-bottom: 18px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #dddddd;
+}
+
+
+/* ================================
+   FOOD BUTTONS
+================================ */
+
+.food-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+.food-button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+.primary-food-button {
+    background-color: #f39c12;
+    color: #111;
+}
+
+.primary-food-button:hover {
+    background-color: white;
+    color: #111;
+
+    transform: translateY(-3px);
+}
+
+.secondary-food-button {
+    border: 2px solid white;
+    color: white;
+}
+
+.secondary-food-button:hover {
+    background-color: white;
+    color: #111;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================================
+   FOOD MOBILE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+
+    .food-section {
+        padding: 80px 25px;
+    }
+
+    .food-container {
+        min-height: 600px;
+    }
+
+    .food-content {
+        padding: 50px 30px;
+    }
+
+    .food-content h2 {
+        font-size: 42px;
+    }
+
+    .food-description {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .food-content {
+        padding: 40px 25px;
+    }
+
+    .food-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .food-button {
+        text-align: center;
+    }
+
+}
+
+/* ================================
+   NEW ACTIVITY CARD IMAGES
+================================ */
+
+.archery-card {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.10),
+            rgba(0, 0, 0, 0.90)
+        ),
+        url("../images/archery.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.buggy-card {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.10),
+            rgba(0, 0, 0, 0.90)
+        ),
+        url("../images/buggy.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rope-card {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.10),
+            rgba(0, 0, 0, 0.90)
+        ),
+        url("../images/zipline.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ================================
+   ZOOM FOR ALL IMAGE ACTIVITY CARDS
+================================ */
+
+.archery-card,
+.buggy-card,
+.rope-card {
+    background-size: 100%;
+    transition: transform 0.5s ease, background-size 1.5s ease;
+}
+
+.archery-card:hover,
+.buggy-card:hover,
+.rope-card:hover {
+    background-size: 135%;
+    transform: translateY(-8px);
 }
