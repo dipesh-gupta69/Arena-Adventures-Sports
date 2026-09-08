@@ -1217,6 +1217,20 @@ body {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 900px) {
+    .activities-section {
+        padding: 80px 25px;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        min-height: 280px;
+        padding: 28px;
+    }
+}
 /* ================================
    ZOOM FOR ALL IMAGE ACTIVITY CARDS
 ================================ */
