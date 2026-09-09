@@ -594,12 +594,88 @@ body {
     background-repeat: no-repeat;
 }
 
+/* ================================
+   NEW ACTIVITY CARD IMAGES
+================================ */
+
+.archery-card {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.10),
+            rgba(0, 0, 0, 0.90)
+        ),
+        url("../images/archery.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.buggy-card {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.10),
+            rgba(0, 0, 0, 0.90)
+        ),
+        url("../images/buggy.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rope-card {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.10),
+            rgba(0, 0, 0, 0.90)
+        ),
+        url("../images/zipline.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.more-card {
+    background: 
+    linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.10),
+        rgba(0, 0, 0, 0.90)
+    ),
+    url("../images/food.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fish-card {
+    background: 
+    linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.10),
+        rgba(0, 0, 0, 0.90)
+    ),
+    url("../images/fishing.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .go-kart-card,
 .atv-card,
 .paint-ball-card,
 .archery-card,
 .buggy-card,
-.rope-card {
+.rope-card,
+.more-card,
+.fish-card {
     background-size: 100%;
 
     transition: 
@@ -612,7 +688,9 @@ body {
 .paint-ball-card:hover,
 .archery-card:hover,
 .buggy-card:hover,
-.rope-card:hover {
+.rope-card:hover,
+.more-card:hover,
+.fish-card:hover {
     background-size: 135%;
     transform: translate(-8px);
 }
@@ -1143,115 +1221,9 @@ body {
 
 }
 
-/* ================================
-   NEW ACTIVITY CARD IMAGES
-================================ */
 
-.archery-card {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.10),
-            rgba(0, 0, 0, 0.90)
-        ),
-        url("../images/archery.jpg");
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
-.buggy-card {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.10),
-            rgba(0, 0, 0, 0.90)
-        ),
-        url("../images/buggy.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.rope-card {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.10),
-            rgba(0, 0, 0, 0.90)
-        ),
-        url("../images/zipline.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.more-card {
-    background: 
-    linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.10),
-        rgba(0, 0, 0, 0.90)
-    ),
-    url("../images/food.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.fish-card {
-    background: 
-    linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.10),
-        rgba(0, 0, 0, 0.90)
-    ),
-    url("../images/fishing.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-@media (max-width: 900px) {
-    .activities-section {
-        padding: 80px 25px;
-    }
-
-    .activities-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .activity-card {
-        min-height: 280px;
-        padding: 28px;
-    }
-}
-/* ================================
-   ZOOM FOR ALL IMAGE ACTIVITY CARDS
-================================ */
-
-.archery-card,
-.buggy-card,
-.rope-card,
-.more-card,
-.fish-card {
-    background-size: 100%;
-    transition: transform 0.5s ease, background-size 1.5s ease;
-}
-
-.archery-card:hover,
-.buggy-card:hover,
-.rope-card:hover,
-.more-card:hover,
-.fish-card:hover {
-    background-size: 135%;
-    transform: translateY(-8px);
-}
 
 /* ================================
    FEATURED ACTIVITY CARDS
