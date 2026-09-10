@@ -31,3 +31,28 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach(function (element) {
     revealObserver.observe(element);
 });
+
+// =================================
+// ACTIVE NAVIGATION
+// =================================
+
+const currentPage = window.location.pathname.split("/").pop();
+
+const navigationLinks = document.querySelectorAll(
+    ".main-navigation a:not(.book-button)"
+);
+
+navigationLinks.forEach(function (link) {
+
+    const linkPage = link.getAttribute("href");
+
+    if (
+        linkPage === currentPage ||
+        (currentPage === "" && linkPage === "index.html")
+    ) {
+        link.classList.add("active");
+    } else {
+        link.classList.remove("active");
+    }
+
+});
