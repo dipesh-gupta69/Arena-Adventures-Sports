@@ -1071,7 +1071,7 @@ body {
             rgba(0, 0, 0, 0.55),
             rgba(0, 0, 0, 0.20)
         ),
-        url("../images/food.png");
+        url("../images/hero.png");
 
     background-size: cover;
     background-position: center;
@@ -1739,4 +1739,295 @@ body {
 
 .why-arena-item:nth-child(4) {
     transition-delay: 0.55s;
+}
+
+/* =================================
+   FOOD SECTION CINEMATIC ZOOM
+   ================================= */
+
+.food-container {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.18)
+        ),
+        url("../images/food.png");
+
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: background-size 2s ease;
+}
+
+.food-container:hover {
+    background-size: 108%;
+}
+
+/* =================================
+   FOOD BUTTON PREMIUM HOVER
+   ================================= */
+
+.food-button {
+    position: relative;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.food-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(243, 156, 18, 0.25);
+}
+
+/* =================================
+   FOOD SECTION CINEMATIC ACCENT
+   ================================= */
+
+.food-container {
+    position: relative;
+}
+
+/* Orange cinematic edge */
+
+.food-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: #f39c12;
+    transition: width 1s ease;
+}
+
+/* Reveal the orange edge on hover */
+
+.food-container:hover::after {
+    width: 100%;
+}
+
+/* =================================
+   ADVENTURE CTA SECTION
+   ================================= */
+
+.adventure-cta-section {
+    min-height: 520px;
+    padding: 110px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.82)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Orange atmosphere */
+
+.adventure-cta-section::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(243, 156, 18, 0.08);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+/* Content */
+
+.adventure-cta-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Heading */
+
+.adventure-cta-content h2 {
+    margin-bottom: 25px;
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.adventure-cta-content h2 span {
+    display: block;
+    color: #f39c12;
+}
+
+/* Description */
+
+.adventure-cta-content > p:not(.section-label) {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #d0d0d0;
+}
+
+/* Buttons */
+
+.adventure-cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.adventure-cta-buttons a {
+    display: inline-block;
+    padding: 16px 30px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: 0.35s ease;
+}
+
+/* Primary */
+
+.cta-primary {
+    background-color: #f39c12;
+    color: #111;
+}
+
+.cta-primary:hover {
+    background-color: white;
+    color: #111;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(243, 156, 18, 0.35);
+}
+
+/* Secondary */
+
+.cta-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.cta-secondary:hover {
+    background-color: white;
+    color: #111;
+    transform: translateY(-5px);
+}
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media (max-width: 900px) {
+
+    .adventure-cta-section {
+        min-height: 500px;
+        padding: 80px 25px;
+    }
+
+    .adventure-cta-content h2 {
+        font-size: 45px;
+    }
+
+    .adventure-cta-content > p:not(.section-label) {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .adventure-cta-section {
+        padding: 70px 20px;
+    }
+
+    .adventure-cta-content h2 {
+        font-size: 38px;
+    }
+
+    .adventure-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .adventure-cta-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =================================
+   CTA BOOKING ATTENTION EFFECT
+   ================================= */
+
+.cta-primary {
+    animation: ctaBookingPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes ctaBookingPulse {
+
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(243, 156, 18, 0);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 28px rgba(243, 156, 18, 0.45);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(243, 156, 18, 0);
+    }
+}
+
+/* Stop pulse while hovering */
+
+.cta-primary:hover {
+    animation: none;
+}
+
+/* =================================
+   CINEMATIC ADVENTURE CTA EFFECT
+================================= */
+
+.adventure-cta-section {
+    background-size: 110%;
+    transition: background-size 8s ease;
+}
+
+.adventure-cta-section:hover {
+    background-size: 120%;
+}
+
+.adventure-cta-content h2 {
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.08),
+        0 0 30px rgba(243,156,18,0.12);
+}
+
+.adventure-cta-content h2 span {
+    text-shadow:
+        0 0 12px rgba(243,156,18,0.35),
+        0 0 35px rgba(243,156,18,0.18);
 }
