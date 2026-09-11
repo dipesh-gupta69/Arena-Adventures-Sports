@@ -2307,3 +2307,1374 @@ body {
     }
 
 }
+
+/* =================================
+   ACTIVITIES PAGE HERO
+================================= */
+
+.activities-page {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.70),
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* CINEMATIC BACKGROUND ZOOM */
+
+.activities-page {
+    animation: activitiesHeroZoom 12s ease-in-out infinite alternate;
+}
+
+@keyframes activitiesHeroZoom {
+
+    0% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 110%;
+    }
+
+}
+
+
+/* HERO CONTENT */
+
+.activities-page-content {
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* SMALL LABEL */
+
+.activities-page-content .section-label {
+    margin-bottom: 22px;
+
+    color: #f39c12;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+
+/* MAIN HEADING */
+
+.activities-page-content h1 {
+    margin-bottom: 25px;
+
+    font-size: clamp(50px, 8vw, 95px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+/* ORANGE HEADING */
+
+.activities-page-content h1 span {
+    display: block;
+
+    color: #f39c12;
+
+    text-shadow:
+        0 0 15px rgba(243, 156, 18, 0.25),
+        0 0 35px rgba(243, 156, 18, 0.12);
+}
+
+
+/* DESCRIPTION */
+
+.activities-page-content > p:last-child {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #ddd;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .activities-page {
+        min-height: calc(100vh - 80px);
+
+        padding: 80px 25px;
+    }
+
+    .activities-page-content h1 {
+        font-size: 60px;
+    }
+
+    .activities-page-content > p:last-child {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .activities-page {
+        padding: 70px 20px;
+    }
+
+    .activities-page-content h1 {
+        font-size: 44px;
+    }
+
+    .activities-page-content .section-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .activities-page-content > p:last-child {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+}
+
+/* =================================
+   ACTIVITIES INTRODUCTION
+================================= */
+
+.activities-intro-section {
+    padding: 120px 50px;
+
+    background-color: #f5f5f5;
+
+    color: #111;
+}
+
+.activities-intro-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* LEFT HEADING */
+
+.activities-intro-heading {
+    max-width: 600px;
+}
+
+.activities-intro-heading .section-label {
+    margin-bottom: 20px;
+
+    color: #f39c12;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.activities-intro-heading h2 {
+    font-size: clamp(40px, 5vw, 64px);
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.activities-intro-heading h2 span {
+    display: block;
+
+    color: #f39c12;
+}
+
+
+/* RIGHT CONTENT */
+
+.activities-intro-content {
+    max-width: 600px;
+}
+
+.activities-intro-content p {
+    margin-bottom: 20px;
+
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+.activities-intro-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .activities-intro-section {
+        padding: 80px 25px;
+    }
+
+    .activities-intro-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .activities-intro-heading h2 {
+        font-size: 44px;
+    }
+
+    .activities-intro-content p {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .activities-intro-section {
+        padding: 70px 20px;
+    }
+
+    .activities-intro-heading h2 {
+        font-size: 38px;
+    }
+
+}
+
+/* =================================
+   MAIN ACTIVITIES SECTION
+================================= */
+
+.main-activities-section {
+    padding: 120px 50px;
+
+    background-color: #111;
+
+    color: white;
+}
+
+.main-activities-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* SECTION HEADING */
+
+.main-activities-heading {
+    max-width: 750px;
+
+    margin-bottom: 60px;
+}
+
+.main-activities-heading .section-label {
+    margin-bottom: 18px;
+
+    color: #f39c12;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.main-activities-heading h2 {
+    margin-bottom: 20px;
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.main-activities-heading h2 span {
+    display: block;
+
+    color: #f39c12;
+}
+
+.main-activities-heading > p:last-child {
+    max-width: 600px;
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* ACTIVITIES GRID */
+
+.main-activities-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ACTIVITY CARD */
+
+.main-activity-card {
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 40px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid #333;
+
+    background-color: #181818;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.4s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* DARK OVERLAY */
+
+.main-activity-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.88)
+        );
+
+    z-index: 1;
+
+    transition: background 0.5s ease;
+}
+
+
+/* HOVER */
+
+.main-activity-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #f39c12;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.45);
+}
+
+.main-activity-card:hover::before {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.92)
+        );
+}
+
+
+/* CARD CONTENT */
+
+.main-activity-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 560px;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.main-activity-card:hover .main-activity-content {
+    transform: translateY(-8px);
+}
+
+
+/* NUMBER */
+
+.main-activity-number {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #f39c12;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+/* TITLE */
+
+.main-activity-content h3 {
+    margin-bottom: 14px;
+
+    font-size: 34px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+/* DESCRIPTION */
+
+.main-activity-content p {
+    margin-bottom: 22px;
+
+    color: #d0d0d0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* BOOK LINK */
+
+.main-activity-content a {
+    display: inline-block;
+
+    color: #f39c12;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.main-activity-content a:hover {
+    color: white;
+
+    transform: translateX(8px);
+}
+
+
+/* =================================
+   ACTIVITY BACKGROUND IMAGES
+================================= */
+
+.go-kart-activity {
+    background-image:
+        url("../images/go-kart.jpg");
+}
+
+.atv-activity {
+    background-image:
+        url("../images/atv.jpg");
+}
+
+.paint-ball-activity {
+    background-image:
+        url("../images/paint-ball.jpg");
+}
+
+.archery-activity {
+    background-image:
+        url("../images/archery.jpg");
+}
+
+
+/* =================================
+   CINEMATIC IMAGE ZOOM
+================================= */
+
+.go-kart-activity,
+.atv-activity,
+.paint-ball-activity,
+.archery-activity {
+    background-size: 100%;
+
+    transition:
+        background-size 2s ease,
+        transform 0.5s ease,
+        border-color 0.4s ease,
+        box-shadow 0.5s ease;
+}
+
+.go-kart-activity:hover,
+.atv-activity:hover,
+.paint-ball-activity:hover,
+.archery-activity:hover {
+    background-size: 115%;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .main-activities-section {
+        padding: 80px 25px;
+    }
+
+    .main-activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-activity-card {
+        min-height: 380px;
+
+        padding: 30px;
+    }
+
+    .main-activity-content h3 {
+        font-size: 30px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .main-activities-section {
+        padding: 70px 20px;
+    }
+
+    .main-activities-heading h2 {
+        font-size: 38px;
+    }
+
+    .main-activity-card {
+        min-height: 350px;
+
+        padding: 25px;
+    }
+
+    .main-activity-content h3 {
+        font-size: 27px;
+    }
+
+}
+
+/* =================================
+   REMAINING ACTIVITY IMAGES
+================================= */
+
+.buggy-activity {
+    background-image:
+        url("../images/buggy.jpg");
+}
+
+.zipline-activity {
+    background-image:
+        url("../images/zipline.jpg");
+}
+
+
+/* =================================
+   FISHING & HARVESTING
+================================= */
+
+/*
+   Change the filename below if your
+   actual fishing image has a different name.
+*/
+
+.fishing-activity {
+    background-image:
+        url("../images/fishing.jpg");
+}
+
+
+/* =================================
+   MORE ADVENTURES
+================================= */
+
+/*
+   Change the filename below if your
+   actual image has a different name.
+*/
+
+.more-adventures-activity {
+    background-image:
+        url("../images/hero.png");
+}
+
+
+/* =================================
+   CINEMATIC ZOOM
+================================= */
+
+.buggy-activity,
+.zipline-activity,
+.fishing-activity,
+.more-adventures-activity {
+    background-size: 100%;
+
+    transition:
+        background-size 2s ease,
+        transform 0.5s ease,
+        border-color 0.4s ease,
+        box-shadow 0.5s ease;
+}
+
+.buggy-activity:hover,
+.zipline-activity:hover,
+.fishing-activity:hover,
+.more-adventures-activity:hover {
+    background-size: 115%;
+}
+
+/* =========================================
+   ACTIVITIES BOTTOM CTA
+========================================= */
+
+.activities-bottom-cta {
+    position: relative;
+    padding: 110px 20px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.78),
+            rgba(0, 0, 0, 0.88)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Cinematic orange glow */
+
+.activities-bottom-cta::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: rgba(243, 156, 18, 0.12);
+    border-radius: 50%;
+    filter: blur(100px);
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* CTA Content */
+
+.activities-bottom-cta-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Small Label */
+
+.activities-bottom-cta .section-label {
+    margin-bottom: 20px;
+}
+
+/* Heading */
+
+.activities-bottom-cta h2 {
+    margin: 0;
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+.activities-bottom-cta h2 span {
+    display: block;
+    color: #f39c12;
+}
+
+/* Description */
+
+.activities-bottom-cta-content > p:not(.section-label) {
+    max-width: 700px;
+    margin: 30px auto 40px;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+    color: #d6d6d6;
+}
+
+/* Buttons Container */
+
+.activities-bottom-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+/* Primary Button */
+
+.activities-cta-primary {
+    display: inline-block;
+
+    padding: 16px 32px;
+
+    background: #f39c12;
+    color: #111;
+
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    border: 2px solid #f39c12;
+
+    transition: all 0.35s ease;
+}
+
+.activities-cta-primary:hover {
+    background: transparent;
+    color: #f39c12;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 35px rgba(243, 156, 18, 0.25);
+}
+
+/* Secondary Button */
+
+.activities-cta-secondary {
+    display: inline-block;
+
+    padding: 16px 32px;
+
+    background: transparent;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    border: 2px solid rgba(255, 255, 255, 0.6);
+
+    transition: all 0.35s ease;
+}
+
+.activities-cta-secondary:hover {
+    background: #ffffff;
+    color: #111;
+
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   ACTIVITIES CTA RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .activities-bottom-cta {
+        padding: 80px 20px;
+        background-attachment: scroll;
+    }
+
+    .activities-bottom-cta h2 {
+        font-size: 2.8rem;
+    }
+
+    .activities-bottom-cta-content > p:not(.section-label) {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .activities-bottom-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .activities-cta-primary,
+    .activities-cta-secondary {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+}
+
+/* =========================================
+   ACTIVITIES HERO - MOBILE FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+    .activities-page {
+        min-height: calc(100vh - 100px);
+
+        background-image:
+            linear-gradient(
+                rgba(0, 0, 0, 0.48),
+                rgba(0, 0, 0, 0.68)
+            ),
+            url("../images/hero.jpg");
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 80px 20px;
+        box-sizing: border-box;
+    }
+
+    .activities-page-content {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
+
+/* =========================================
+   FINAL MOBILE ACTIVITIES HERO FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+    .activities-page {
+        position: relative;
+        min-height: calc(100vh - 100px);
+
+        padding: 80px 20px;
+
+        background: none !important;
+
+        overflow: hidden;
+    }
+
+    /* Full-screen hero background image */
+
+    .activities-page::before {
+        content: "";
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-image:
+            linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.70)
+            ),
+            url("../images/hero.jpg");
+
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+
+        z-index: 0;
+
+        transform: none !important;
+        animation: none !important;
+    }
+
+    /* Keep text above image */
+
+    .activities-page-content {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+        max-width: 650px;
+
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
+
+/* =========================================
+   PREMIUM ACTIVITY CARD EFFECTS
+========================================= */
+
+.main-activity-card {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.5s ease;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* -----------------------------------------
+   CINEMATIC IMAGE ZOOM
+----------------------------------------- */
+
+.main-activity-card::before {
+    transition:
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.8s ease;
+}
+
+
+/* -----------------------------------------
+   DARK CINEMATIC OVERLAY
+----------------------------------------- */
+
+.main-activity-card::after {
+    transition:
+        background 0.5s ease;
+}
+
+
+/* -----------------------------------------
+   CARD HOVER
+----------------------------------------- */
+
+.main-activity-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.55),
+        0 0 35px rgba(243, 156, 18, 0.12);
+}
+
+
+/* Image becomes slightly closer */
+
+.main-activity-card:hover::before {
+    transform: scale(1.10);
+    filter: brightness(0.85);
+}
+
+
+/* Stronger cinematic overlay */
+
+.main-activity-card:hover::after {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.90) 0%,
+            rgba(0, 0, 0, 0.55) 55%,
+            rgba(0, 0, 0, 0.25) 100%
+        );
+}
+
+
+/* -----------------------------------------
+   ACTIVITY CONTENT
+----------------------------------------- */
+
+.main-activity-content {
+    transition:
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* Move content upward */
+
+.main-activity-card:hover .main-activity-content {
+    transform: translateY(-8px);
+}
+
+
+/* -----------------------------------------
+   ACTIVITY NUMBER
+----------------------------------------- */
+
+.main-activity-number {
+    transition:
+        color 0.3s ease,
+        letter-spacing 0.4s ease;
+}
+
+.main-activity-card:hover .main-activity-number {
+    color: #f39c12;
+    letter-spacing: 4px;
+}
+
+
+/* -----------------------------------------
+   ACTIVITY TITLE
+----------------------------------------- */
+
+.main-activity-content h3 {
+    transition:
+        color 0.3s ease,
+        transform 0.4s ease;
+}
+
+.main-activity-card:hover .main-activity-content h3 {
+    color: #f39c12;
+    transform: translateX(5px);
+}
+
+
+/* -----------------------------------------
+   BOOK LINK
+----------------------------------------- */
+
+.main-activity-content a {
+    transition:
+        color 0.3s ease,
+        letter-spacing 0.4s ease;
+}
+
+.main-activity-card:hover .main-activity-content a {
+    color: #f39c12;
+    letter-spacing: 1.5px;
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .main-activity-card:hover {
+        transform: none;
+    }
+
+    .main-activity-card:hover::before {
+        transform: scale(1.04);
+    }
+
+    .main-activity-card:hover .main-activity-content {
+        transform: none;
+    }
+
+    .main-activity-card:hover .main-activity-content h3 {
+        transform: none;
+    }
+
+}
+
+/* =========================================
+   ACTIVITIES PAGE - PREMIUM SPACING
+========================================= */
+
+.activities-intro-section {
+    padding: 120px 20px;
+}
+
+.activities-intro-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* -----------------------------------------
+   INTRO HEADING
+----------------------------------------- */
+
+.activities-intro-heading h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.activities-intro-heading h2 span {
+    display: block;
+    color: #f39c12;
+}
+
+.activities-intro-content {
+    max-width: 720px;
+}
+
+.activities-intro-content p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #cfcfcf;
+}
+
+
+/* =========================================
+   MAIN ACTIVITIES SECTION
+========================================= */
+
+.main-activities-section {
+    padding: 100px 20px 120px;
+}
+
+.main-activities-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* -----------------------------------------
+   SECTION HEADING
+----------------------------------------- */
+
+.main-activities-heading {
+    max-width: 750px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.main-activities-heading h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin: 15px 0 20px;
+}
+
+.main-activities-heading h2 span {
+    color: #f39c12;
+}
+
+.main-activities-heading > p:last-child {
+    max-width: 600px;
+    margin: 0 auto;
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: #bdbdbd;
+}
+
+
+/* -----------------------------------------
+   ACTIVITY GRID
+----------------------------------------- */
+
+.main-activities-grid {
+    gap: 28px;
+}
+
+
+/* -----------------------------------------
+   ACTIVITY CARD CONTENT
+----------------------------------------- */
+
+.main-activity-content {
+    padding: 35px;
+}
+
+.main-activity-content h3 {
+    font-size: 2rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    margin: 12px 0 15px;
+}
+
+.main-activity-content p {
+    max-width: 500px;
+
+    font-size: 0.98rem;
+    line-height: 1.7;
+
+    color: #e0e0e0;
+}
+
+.main-activity-content a {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   PREMIUM MOBILE SPACING
+========================================= */
+
+@media (max-width: 768px) {
+
+    .activities-intro-section {
+        padding: 80px 20px;
+    }
+
+    .activities-intro-heading h2 {
+        font-size: 2.6rem;
+    }
+
+    .activities-intro-content {
+        margin-top: 30px;
+    }
+
+    .activities-intro-content p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .main-activities-section {
+        padding: 70px 16px 90px;
+    }
+
+    .main-activities-heading {
+        margin-bottom: 45px;
+    }
+
+    .main-activities-heading h2 {
+        font-size: 2.6rem;
+    }
+
+    .main-activities-heading > p:last-child {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .main-activities-grid {
+        gap: 20px;
+    }
+
+    .main-activity-content {
+        padding: 28px 24px;
+    }
+
+    .main-activity-content h3 {
+        font-size: 1.65rem;
+    }
+
+    .main-activity-content p {
+        font-size: 0.92rem;
+        line-height: 1.65;
+    }
+
+}
+
+/* =========================================
+   ACTIVITIES INTRO - DESCRIPTION VISIBILITY
+========================================= */
+
+.activities-intro-content p {
+    color: #555555;
+    font-weight: 500;
+}
+
+/* =========================================
+   ACTIVITY NUMBER PREMIUM EFFECT
+========================================= */
+
+.main-activity-number {
+    display: inline-block;
+
+    position: relative;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    transition:
+        color 0.4s ease,
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        letter-spacing 0.5s ease;
+}
+
+.main-activity-card:hover .main-activity-number {
+    color: #f39c12;
+
+    transform: translateX(6px);
+
+    letter-spacing: 5px;
+}
