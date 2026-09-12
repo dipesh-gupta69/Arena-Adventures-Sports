@@ -3678,3 +3678,2297 @@ body {
 
     letter-spacing: 5px;
 }
+
+/* =========================================
+   FOOD & DINING PAGE HERO
+========================================= */
+
+.food-page {
+    position: relative;
+
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.72)
+        ),
+        url("../images/food.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+.food-page-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.food-page-content h1 {
+    margin: 15px 0 25px;
+
+    font-size: clamp(3rem, 8vw, 7rem);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+
+.food-page-content h1 span {
+    display: block;
+
+    color: #f39c12;
+}
+
+
+.food-page-content > p:not(.section-label) {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    color: #eeeeee;
+}
+
+
+/* =========================================
+   FOOD HERO MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .food-page {
+        min-height: calc(100vh - 100px);
+
+        padding: 80px 20px;
+
+        background:
+            linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.70)
+            ),
+            url("../images/food.jpg");
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+
+    .food-page-content h1 {
+        font-size: 3.4rem;
+    }
+
+
+    .food-page-content > p:not(.section-label) {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+    }
+
+}
+
+/* =========================================
+   FOOD & DINING INTRODUCTION
+========================================= */
+
+.food-intro-section {
+    padding: 120px 20px;
+
+    background: #f5f5f5;
+
+    color: #111111;
+}
+
+
+.food-intro-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* -----------------------------------------
+   INTRO HEADING
+----------------------------------------- */
+
+.food-intro-heading .section-label {
+    color: #f39c12;
+}
+
+
+.food-intro-heading h2 {
+    margin: 15px 0 0;
+
+    font-size: clamp(2.8rem, 5vw, 5rem);
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.food-intro-heading h2 span {
+    display: block;
+
+    color: #f39c12;
+}
+
+
+/* -----------------------------------------
+   INTRO CONTENT
+----------------------------------------- */
+
+.food-intro-content {
+    max-width: 650px;
+}
+
+
+.food-intro-content p {
+    margin: 0 0 25px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    color: #555555;
+}
+
+
+.food-intro-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   FOOD INTRO MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .food-intro-section {
+        padding: 80px 20px;
+    }
+
+
+    .food-intro-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .food-intro-heading h2 {
+        font-size: 2.8rem;
+    }
+
+
+    .food-intro-content p {
+        font-size: 0.95rem;
+
+        line-height: 1.75;
+    }
+
+}
+
+/* =========================================
+   FOOD EXPERIENCE CARDS
+========================================= */
+
+.food-experience-section {
+    padding: 110px 20px 120px;
+
+    background: #111111;
+}
+
+
+.food-experience-container {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   FOOD CARD
+========================================= */
+
+.food-card {
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    isolation: isolate;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.5s ease;
+}
+
+
+/* -----------------------------------------
+   CARD IMAGES
+----------------------------------------- */
+
+.vegetarian-card {
+    background-image:
+        url("../images/food.jpg");
+}
+
+
+.non-vegetarian-card {
+    background-image:
+        url("../images/food.jpg");
+}
+
+
+/* -----------------------------------------
+   DARK OVERLAY
+----------------------------------------- */
+
+.food-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.58) 50%,
+            rgba(0, 0, 0, 0.20) 100%
+        );
+}
+
+
+/* -----------------------------------------
+   IMAGE ZOOM
+----------------------------------------- */
+
+.food-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background: inherit;
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition:
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* -----------------------------------------
+   CARD CONTENT
+----------------------------------------- */
+
+.food-card-content {
+    width: 100%;
+
+    padding: 40px;
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #ffffff;
+
+    transition:
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.food-card-number {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: #f39c12;
+}
+
+
+.food-card-content .section-label {
+    margin-bottom: 12px;
+}
+
+
+.food-card-content h3 {
+    margin: 0 0 15px;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.food-card-content > p:not(.section-label) {
+    max-width: 520px;
+
+    margin: 0 0 25px;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    color: #dddddd;
+}
+
+
+.food-card-content a {
+    display: inline-block;
+
+    color: #f39c12;
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition:
+        color 0.3s ease,
+        letter-spacing 0.4s ease;
+}
+
+
+/* -----------------------------------------
+   HOVER EFFECT
+----------------------------------------- */
+
+.food-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.65),
+        0 0 35px rgba(243, 156, 18, 0.10);
+}
+
+
+.food-card:hover::after {
+    transform: scale(1.10);
+}
+
+
+.food-card:hover .food-card-content {
+    transform: translateY(-8px);
+}
+
+
+.food-card:hover .food-card-content a {
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FOOD CARDS MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .food-experience-section {
+        padding: 75px 16px 90px;
+    }
+
+
+    .food-experience-container {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .food-card {
+        min-height: 430px;
+    }
+
+
+    .food-card-content {
+        padding: 30px 25px;
+    }
+
+
+    .food-card-content h3 {
+        font-size: 2.2rem;
+    }
+
+
+    .food-card-content > p:not(.section-label) {
+        font-size: 0.92rem;
+        line-height: 1.65;
+    }
+
+
+    .food-card:hover {
+        transform: none;
+    }
+
+
+    .food-card:hover .food-card-content {
+        transform: none;
+    }
+
+
+    .food-card:hover::after {
+        transform: scale(1.04);
+    }
+
+}
+
+/* =================================
+   OUTDOOR DINING EXPERIENCE
+================================= */
+
+.outdoor-dining-section {
+    position: relative;
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    padding: 120px 20px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.78) 45%,
+            rgba(0, 0, 0, 0.35) 100%
+        ),
+        url("../images/food.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.outdoor-dining-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.outdoor-dining-content {
+    max-width: 720px;
+}
+
+.outdoor-dining-content .section-label {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.outdoor-dining-content h2 {
+    margin: 0 0 25px;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.outdoor-dining-content h2 span {
+    display: block;
+    color: #f39c12;
+}
+
+.outdoor-dining-description {
+    max-width: 650px;
+    margin: 0 0 40px;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #eeeeee;
+}
+
+/* HIGHLIGHTS */
+
+.outdoor-dining-highlights {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.dining-highlight {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.dining-highlight > span {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #f39c12;
+}
+
+.dining-highlight p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #cccccc;
+}
+
+.dining-highlight strong {
+    display: block;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* BUTTON */
+
+.outdoor-dining-button {
+    display: inline-block;
+    padding: 15px 28px;
+    border: 1px solid #f39c12;
+    color: #f39c12;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.outdoor-dining-button:hover {
+    background: #f39c12;
+    color: #111111;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(243, 156, 18, 0.25);
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .outdoor-dining-section {
+        min-height: auto;
+        padding: 90px 20px;
+        background:
+            linear-gradient(
+                rgba(0, 0, 0, 0.78),
+                rgba(0, 0, 0, 0.92)
+            ),
+            url("../images/food.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .outdoor-dining-content {
+        max-width: 100%;
+    }
+
+    .outdoor-dining-content h2 {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .outdoor-dining-description {
+        font-size: 0.95rem;
+        line-height: 1.75;
+        margin-bottom: 35px;
+    }
+
+    .outdoor-dining-highlights {
+        flex-direction: column;
+        gap: 22px;
+        margin-bottom: 35px;
+    }
+
+    .dining-highlight {
+        gap: 14px;
+    }
+
+    .dining-highlight p {
+        font-size: 0.85rem;
+    }
+
+    .outdoor-dining-button {
+        padding: 14px 24px;
+        font-size: 0.8rem;
+    }
+}
+
+/* =================================
+   FOOD PAGE FINAL CTA
+================================= */
+
+.food-final-cta {
+    position: relative;
+    padding: 130px 20px;
+    background: #f39c12;
+    color: #111111;
+    text-align: center;
+    overflow: hidden;
+}
+
+.food-final-cta::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+    top: -250px;
+    left: -180px;
+}
+
+.food-final-cta::after {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 50%;
+    bottom: -400px;
+    right: -250px;
+}
+
+.food-final-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.food-final-cta .section-label {
+    color: #111111;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.food-final-cta h2 {
+    margin: 0 0 25px;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.food-final-cta h2 span {
+    display: block;
+}
+
+.food-final-cta-content > p:not(.section-label) {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #222222;
+}
+
+.food-final-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.food-final-primary,
+.food-final-secondary {
+    display: inline-block;
+    padding: 16px 30px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.food-final-primary {
+    background: #111111;
+    color: #ffffff;
+}
+
+.food-final-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.food-final-secondary {
+    border: 2px solid #111111;
+    color: #111111;
+}
+
+.food-final-secondary:hover {
+    background: #111111;
+    color: #ffffff;
+    transform: translateY(-4px);
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .food-final-cta {
+        padding: 90px 20px;
+    }
+
+    .food-final-cta h2 {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .food-final-cta-content > p:not(.section-label) {
+        font-size: 0.95rem;
+        line-height: 1.75;
+        margin-bottom: 32px;
+    }
+
+    .food-final-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .food-final-primary,
+    .food-final-secondary {
+        width: 100%;
+        text-align: center;
+        padding: 15px 20px;
+    }
+}
+
+/* =================================
+   FISHING & HARVESTING HERO
+================================= */
+
+.fishing-page {
+    position: relative;
+    min-height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("../images/fishing.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.fishing-page-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.fishing-page-content .section-label {
+    color: #f39c12;
+}
+
+.fishing-page-content h1 {
+    margin: 15px 0 25px;
+
+    font-size: clamp(3rem, 8vw, 7rem);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+.fishing-page-content h1 span {
+    display: block;
+
+    color: #f39c12;
+}
+
+.fishing-page-content > p:not(.section-label) {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    color: #eeeeee;
+}
+
+
+/* =================================
+   MOBILE FISHING HERO
+================================= */
+
+@media (max-width: 768px) {
+
+    .fishing-page {
+        min-height: calc(100vh - 100px);
+
+        padding: 80px 20px;
+
+        background:
+            linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.72)
+            ),
+            url("../images/fishing.jpg");
+
+        background-size: cover;
+
+        background-position: center center;
+
+        background-repeat: no-repeat;
+    }
+
+    .fishing-page-content h1 {
+        font-size: 3.4rem;
+    }
+
+    .fishing-page-content > p:not(.section-label) {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+    }
+}
+
+/* =================================
+   SELF FISHING EXPERIENCE
+================================= */
+
+.fishing-experience-section {
+    padding: 120px 20px;
+    background: #f5f5f5;
+    color: #111111;
+}
+
+.fishing-experience-container {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* =================================
+   IMAGE
+================================= */
+
+.fishing-experience-image {
+    position: relative;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.30);
+}
+
+.fishing-experience-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.25),
+            transparent 60%
+        );
+
+    pointer-events: none;
+}
+
+.fishing-experience-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 600px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fishing-experience-image:hover img {
+    transform: scale(1.07);
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.fishing-experience-content {
+    max-width: 650px;
+}
+
+.fishing-experience-content .section-label {
+    color: #f39c12;
+
+    margin-bottom: 15px;
+}
+
+.fishing-experience-content h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.fishing-experience-content h2 span {
+    display: block;
+
+    color: #f39c12;
+}
+
+.fishing-experience-content > p {
+    margin: 0 0 22px;
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+
+    color: #555555;
+}
+
+
+/* =================================
+   EXPERIENCE POINTS
+================================= */
+
+.fishing-experience-points {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.fishing-point {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 15px;
+
+    align-items: start;
+}
+
+.fishing-point > span {
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #f39c12;
+}
+
+.fishing-point h3 {
+    margin: 0 0 7px;
+
+    font-size: 0.95rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.fishing-point p {
+    margin: 0;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+
+    color: #666666;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .fishing-experience-section {
+        padding: 80px 15px;
+    }
+
+    .fishing-experience-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .fishing-experience-image {
+        min-height: 0;
+        
+    }
+
+    .fishing-experience-image img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        object-fit: contain;
+        
+    }
+
+    
+
+    .fishing-experience-content h2 {
+        font-size: 3rem;
+    }
+
+    .fishing-experience-content > p {
+        font-size: 0.95rem;
+
+        line-height: 1.75;
+    }
+
+    .fishing-experience-points {
+        gap: 20px;
+    }
+
+    .fishing-point {
+        grid-template-columns: 38px 1fr;
+    }
+
+    .fishing-point h3 {
+        font-size: 0.88rem;
+    }
+
+    .fishing-point p {
+        font-size: 0.85rem;
+    }
+
+}
+
+/* =================================
+   FRESH HARVESTING EXPERIENCE
+================================= */
+
+.harvesting-experience-section {
+    padding: 120px 20px;
+    background: #111111;
+    color: #ffffff;
+}
+
+.harvesting-experience-container {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.harvesting-experience-content {
+    max-width: 650px;
+}
+
+.harvesting-experience-content .section-label {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.harvesting-experience-content h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.harvesting-experience-content h2 span {
+    display: block;
+    color: #f39c12;
+}
+
+.harvesting-experience-content > p {
+    margin: 0 0 22px;
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+
+    color: #cccccc;
+}
+
+
+/* =================================
+   HIGHLIGHTS
+================================= */
+
+.harvesting-highlights {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.harvesting-highlight {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 15px;
+
+    align-items: start;
+}
+
+.harvesting-highlight > span {
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #f39c12;
+}
+
+.harvesting-highlight h3 {
+    margin: 0 0 7px;
+
+    font-size: 0.95rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.harvesting-highlight p {
+    margin: 0;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+
+    color: #999999;
+}
+
+
+/* =================================
+   IMAGE
+================================= */
+
+.harvesting-experience-image {
+    position: relative;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.55);
+}
+
+.harvesting-experience-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.30),
+            transparent 60%
+        );
+
+    pointer-events: none;
+}
+
+.harvesting-experience-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 600px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.harvesting-experience-image:hover img {
+    transform: scale(1.07);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .harvesting-experience-section {
+        padding: 80px 20px;
+    }
+
+    .harvesting-experience-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .harvesting-experience-content {
+        max-width: 100%;
+    }
+
+    .harvesting-experience-content h2 {
+        font-size: 3rem;
+    }
+
+    .harvesting-experience-content > p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .harvesting-highlights {
+        gap: 20px;
+    }
+
+    .harvesting-highlight {
+        grid-template-columns: 38px 1fr;
+    }
+
+    .harvesting-highlight h3 {
+        font-size: 0.88rem;
+    }
+
+    .harvesting-highlight p {
+        font-size: 0.85rem;
+    }
+
+    .harvesting-experience-image {
+        min-height: 0;
+    }
+
+    .harvesting-experience-image img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        object-fit: contain;
+    }
+
+}
+
+/* =================================
+   FAMILY & GROUP EXPERIENCE
+================================= */
+
+.fishing-family-section {
+    padding: 120px 20px;
+    background: #f5f5f5;
+    color: #111111;
+}
+
+.fishing-family-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.fishing-family-heading {
+    max-width: 750px;
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.fishing-family-heading .section-label {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.fishing-family-heading h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.fishing-family-heading h2 span {
+    display: block;
+    color: #f39c12;
+}
+
+.fishing-family-heading > p:not(.section-label) {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    color: #666666;
+}
+
+
+/* =================================
+   CARDS
+================================= */
+
+.fishing-family-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.family-experience-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 35px 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.5s ease;
+}
+
+.family-experience-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(243, 156, 18, 0.25);
+
+    border-radius: 50%;
+
+    top: -90px;
+    right: -70px;
+
+    transition:
+        transform 0.8s ease;
+}
+
+.family-experience-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #f39c12;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.family-experience-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.25);
+}
+
+.family-experience-card:hover::before {
+    transform: scale(1.5);
+}
+
+.family-experience-card:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =================================
+   CARD CONTENT
+================================= */
+
+.family-card-number {
+    position: absolute;
+
+    top: 25px;
+    left: 28px;
+
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #f39c12;
+}
+
+.family-card-icon {
+    margin-bottom: 20px;
+
+    font-size: 0.72rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #888888;
+}
+
+.family-experience-card h3 {
+    margin: 0 0 12px;
+
+    font-size: 1.35rem;
+
+    line-height: 1.1;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.family-experience-card p {
+    margin: 0;
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+
+    color: #bdbdbd;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .fishing-family-section {
+        padding: 80px 20px;
+    }
+
+    .fishing-family-heading {
+        margin-bottom: 45px;
+    }
+
+    .fishing-family-heading h2 {
+        font-size: 3rem;
+    }
+
+    .fishing-family-heading > p:not(.section-label) {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .fishing-family-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .family-experience-card {
+        min-height: 270px;
+        padding: 32px 25px;
+    }
+
+    .family-experience-card:hover {
+        transform: none;
+    }
+
+}
+
+/* =================================
+   FISHING PAGE FINAL CTA
+================================= */
+
+.fishing-final-cta {
+    position: relative;
+
+    padding: 130px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.80),
+            rgba(0, 0, 0, 0.92)
+        ),
+        url("../images/fishing.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* =================================
+   CINEMATIC CIRCLES
+================================= */
+
+.fishing-final-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(243, 156, 18, 0.20);
+
+    border-radius: 50%;
+
+    top: -280px;
+    left: -180px;
+}
+
+.fishing-final-cta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    border: 1px solid rgba(243, 156, 18, 0.15);
+
+    border-radius: 50%;
+
+    bottom: -400px;
+    right: -250px;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.fishing-final-cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.fishing-final-cta .section-label {
+    color: #f39c12;
+
+    margin-bottom: 15px;
+}
+
+.fishing-final-cta h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.fishing-final-cta h2 span {
+    display: block;
+
+    color: #f39c12;
+}
+
+.fishing-final-cta-content > p:not(.section-label) {
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color: #dddddd;
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.fishing-final-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.fishing-final-primary,
+.fishing-final-secondary {
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.fishing-final-primary {
+    background: #f39c12;
+
+    color: #111111;
+}
+
+.fishing-final-primary:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(243, 156, 18, 0.25);
+}
+
+.fishing-final-secondary {
+    border: 2px solid #f39c12;
+
+    color: #f39c12;
+}
+
+.fishing-final-secondary:hover {
+    background: #f39c12;
+
+    color: #111111;
+
+    transform: translateY(-4px);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .fishing-final-cta {
+        padding: 90px 20px;
+
+        background:
+            linear-gradient(
+                rgba(0, 0, 0, 0.78),
+                rgba(0, 0, 0, 0.93)
+            ),
+            url("../images/fishing.jpg");
+
+        background-size: cover;
+
+        background-position: center;
+    }
+
+    .fishing-final-cta h2 {
+        font-size: 3rem;
+
+        line-height: 1;
+    }
+
+    .fishing-final-cta-content > p:not(.section-label) {
+        font-size: 0.95rem;
+
+        line-height: 1.75;
+
+        margin-bottom: 32px;
+    }
+
+    .fishing-final-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .fishing-final-primary,
+    .fishing-final-secondary {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 15px 20px;
+    }
+
+}
+
+/* =================================
+   GARDEN HERO
+================================= */
+
+.garden-page {
+    position: relative;
+
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.40),
+            rgba(0, 0, 0, 0.72)
+        ),
+        url("../images/garden.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+.garden-page-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.garden-page-content .section-label {
+    color: #f39c12;
+
+    margin-bottom: 15px;
+}
+
+
+.garden-page-content h1 {
+    margin: 0 0 25px;
+
+    font-size: clamp(
+        3rem,
+        8vw,
+        7rem
+    );
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+
+.garden-page-content h1 span {
+    display: block;
+
+    color: #f39c12;
+}
+
+
+.garden-page-content > p:not(.section-label) {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    color: #eeeeee;
+}
+
+
+/* =================================
+   MOBILE GARDEN HERO
+================================= */
+
+@media (max-width: 768px) {
+
+    .garden-page {
+
+        min-height: calc(100vh - 100px);
+
+        padding: 80px 20px;
+
+        background:
+            linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.72)
+            ),
+            url("../images/garden.jpg");
+
+        background-size: cover;
+
+        background-position: center center;
+
+        background-repeat: no-repeat;
+
+    }
+
+
+    .garden-page-content h1 {
+
+        font-size: 3.4rem;
+
+    }
+
+
+    .garden-page-content > p:not(.section-label) {
+
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+
+    }
+
+}
+
+/* =================================
+   GARDEN EXPERIENCE
+================================= */
+
+.garden-experience-section {
+    padding: 120px 20px;
+
+    background: #f5f5f5;
+
+    color: #111111;
+}
+
+
+.garden-experience-container {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* =================================
+   IMAGE
+================================= */
+
+.garden-experience-image {
+    position: relative;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.30);
+}
+
+
+.garden-experience-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.20),
+            transparent 60%
+        );
+
+    pointer-events: none;
+}
+
+
+.garden-experience-image img {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 600px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 1.2s cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+
+.garden-experience-image:hover img {
+    transform: scale(1.07);
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.garden-experience-content {
+    max-width: 650px;
+}
+
+
+.garden-experience-content .section-label {
+    color: #f39c12;
+
+    margin-bottom: 15px;
+}
+
+
+.garden-experience-content h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(
+        3rem,
+        5vw,
+        5rem
+    );
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.garden-experience-content h2 span {
+    display: block;
+
+    color: #f39c12;
+}
+
+
+.garden-experience-content > p {
+    margin: 0 0 22px;
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+
+    color: #555555;
+}
+
+
+/* =================================
+   EXPERIENCE POINTS
+================================= */
+
+.garden-experience-points {
+    margin-top: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+
+.garden-point {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 15px;
+
+    align-items: start;
+}
+
+
+.garden-point > span {
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #f39c12;
+}
+
+
+.garden-point h3 {
+    margin: 0 0 7px;
+
+    font-size: 0.95rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.garden-point p {
+    margin: 0;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+
+    color: #666666;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .garden-experience-section {
+        padding: 80px 20px;
+    }
+
+
+    .garden-experience-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .garden-experience-image {
+        min-height: 0;
+    }
+
+
+    .garden-experience-image img {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        object-fit: contain;
+    }
+
+
+    .garden-experience-content {
+        max-width: 100%;
+    }
+
+
+    .garden-experience-content h2 {
+        font-size: 3rem;
+    }
+
+
+    .garden-experience-content > p {
+        font-size: 0.95rem;
+
+        line-height: 1.75;
+    }
+
+
+    .garden-experience-points {
+        gap: 20px;
+    }
+
+
+    .garden-point {
+        grid-template-columns: 38px 1fr;
+    }
+
+
+    .garden-point h3 {
+        font-size: 0.88rem;
+    }
+
+
+    .garden-point p {
+        font-size: 0.85rem;
+    }
+
+}
