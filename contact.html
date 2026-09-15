@@ -1,11 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Contact | Arena Adventures Sports
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 </head>
+
+
 <body>
-    
+
+
+    <!-- =================================
+         HEADER
+    ================================= -->
+
+    <header class="site-header">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <span class="logo-main">
+                    ARENA
+                </span>
+
+                <span class="logo-sub">
+                    ADVENTURES SPORTS
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <button
+            class="menu-toggle"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
+
+        <nav class="main-navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="activities.html">
+                Activities
+            </a>
+
+            <a href="food.html">
+                Food & Dining
+            </a>
+
+            <a href="fishing.html">
+                Fishing
+            </a>
+
+            <a href="garden.html">
+                Garden
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a
+                href="contact.html"
+                class="active"
+            >
+                Contact
+            </a>
+
+            <a
+                href="booking.html"
+                class="book-button"
+            >
+                Book Now
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =================================
+         MAIN
+    ================================= -->
+
+    <main>
+
+
+        <!-- =================================
+             CONTACT HERO
+        ================================= -->
+
+        <section class="contact-page">
+
+            <div class="contact-page-content">
+
+                <p class="section-label">
+                    LET'S CONNECT
+                </p>
+
+                <h1>
+
+                    GET IN
+                    <span>TOUCH.</span>
+
+                </h1>
+
+                <p>
+
+                    Have a question, planning a visit
+                    or want to know more about our
+                    adventures? We would love to
+                    hear from you.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- =================================
+     CONTACT INFORMATION
+================================= -->
+
+<section class="contact-info-section">
+
+    <div class="contact-info-container">
+
+
+        <div class="contact-info-heading reveal">
+
+            <p class="section-label">
+                WE ARE HERE FOR YOU
+            </p>
+
+            <h2>
+                LET'S START A
+                <span>CONVERSATION.</span>
+            </h2>
+
+            <p>
+                Whether you have a question, need
+                more information or are planning
+                your next adventure, get in touch
+                with our team.
+            </p>
+
+        </div>
+
+
+        <div class="contact-info-grid">
+
+
+            <!-- VISIT US -->
+
+            <article class="contact-info-card reveal">
+
+                <span class="contact-info-number">
+                    01
+                </span>
+
+                <div class="contact-info-icon">
+                    VISIT
+                </div>
+
+                <h3>
+                    VISIT US
+                </h3>
+
+                <p>
+                    Come experience the excitement,
+                    nature and hospitality of Arena
+                    Adventures Sports.
+                </p>
+
+                <a href="#">
+                    VIEW LOCATION →
+                </a>
+
+            </article>
+
+
+            <!-- CALL US -->
+
+            <article class="contact-info-card reveal">
+
+                <span class="contact-info-number">
+                    02
+                </span>
+
+                <div class="contact-info-icon">
+                    CALL
+                </div>
+
+                <h3>
+                    CALL US
+                </h3>
+
+                <p>
+                    Have questions about activities,
+                    bookings or facilities? Speak
+                    directly with our team.
+                </p>
+
+                <a href="tel:+9779821901942">
+                    +977 9821901942
+                </a>
+
+            </article>
+
+
+            <!-- EMAIL US -->
+
+            <article class="contact-info-card reveal">
+
+                <span class="contact-info-number">
+                    03
+                </span>
+
+                <div class="contact-info-icon">
+                    EMAIL
+                </div>
+
+                <h3>
+                    EMAIL US
+                </h3>
+
+                <p>
+                    Send us your questions and we will
+                    get back to you with the information
+                    you need.
+                </p>
+
+                <a href="mailto:info@example.com">
+                    info@arena.adventures.sports.com
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =================================
+     CONTACT FORM
+================================= -->
+<section class="contact-form-section">
+
+    <div class="contact-form-container">
+
+        <div class="contact-form-heading reveal">
+            <p class="section-label">SEND US A MESSAGE</p>
+
+            <h2>
+                LET'S MAKE YOUR
+                <span>ADVENTURE HAPPEN.</span>
+            </h2>
+
+            <p>
+                Have a question, need more information or
+                want to plan your visit? Fill out the form
+                and our team will get in touch with you.
+            </p>
+        </div>
+
+
+        <form class="contact-form reveal" id="contactForm">
+
+            <div class="contact-form-row">
+
+                <div class="contact-form-group">
+                    <label for="name">YOUR NAME</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+
+                <div class="contact-form-group">
+                    <label for="phone">PHONE NUMBER</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="contact-form-row">
+
+                <div class="contact-form-group">
+                    <label for="email">EMAIL ADDRESS</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+
+                <div class="contact-form-group">
+                    <label for="activity">ACTIVITY / SUBJECT</label>
+
+                    <select id="activity" name="activity" required>
+
+                        <option value="" selected disabled>
+                            Select an activity
+                        </option>
+
+                        <option value="Go-Kart">
+                            Go-Kart
+                        </option>
+
+                        <option value="ATV Ride">
+                            ATV Ride
+                        </option>
+
+                        <option value="Paint Ball">
+                            Paint Ball
+                        </option>
+
+                        <option value="Archery">
+                            Archery
+                        </option>
+
+                        <option value="Tandem Off-Road Buggy">
+                            Tandem Off-Road Buggy
+                        </option>
+
+                        <option value="Zip Line">
+                            Zip Line
+                        </option>
+
+                        <option value="Fishing & Harvesting">
+                            Fishing & Harvesting
+                        </option>
+
+                        <option value="Food & Dining">
+                            Food & Dining
+                        </option>
+
+                        <option value="Garden">
+                            Garden
+                        </option>
+
+                        <option value="General Enquiry">
+                            General Enquiry
+                        </option>
+
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="contact-form-group">
+
+                <label for="message">YOUR MESSAGE</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="7"
+                    placeholder="Tell us how we can help you..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="contact-form-submit">
+
+                <button type="submit" class="contact-submit-button">
+                    SEND MESSAGE
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- =================================
+     CONTACT LOCATION
+================================= -->
+<section class="contact-location-section">
+
+    <div class="contact-location-container">
+
+        <div class="contact-location-content reveal">
+
+            <p class="section-label">FIND US</p>
+
+            <h2>
+                COME FIND
+                <span>THE ARENA.</span>
+            </h2>
+
+            <p>
+                Ready for your next adventure?
+                Visit Arena Adventures Sports and
+                experience thrilling activities,
+                delicious food and peaceful moments
+                surrounded by nature.
+            </p>
+
+            <div class="contact-location-details">
+
+                <div class="contact-location-detail">
+                    <span>01</span>
+                    <div>
+                        <h3>LOCATION</h3>
+                        <p>
+                            Arena Adventures Sports<br>
+                            Your Location Here
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-location-detail">
+                    <span>02</span>
+                    <div>
+                        <h3>OPENING HOURS</h3>
+                        <p>
+                            Monday – Sunday<br>
+                            09:00 AM – 09:00 PM
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <a
+                href="#"
+                class="contact-location-button"
+                target="_blank"
+            >
+                GET DIRECTIONS →
+            </a>
+
+        </div>
+
+
+        <div class="contact-map reveal">
+
+            <div class="contact-map-placeholder">
+
+                <div class="contact-map-content">
+
+                    <span class="contact-map-pin">●</span>
+
+                    <p class="section-label">
+                        ARENA ADVENTURES SPORTS
+                    </p>
+
+                    <h3>YOUR LOCATION</h3>
+
+                    <p>
+                        Map will be added here
+                        once the exact business
+                        location is available.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =================================
+     CONTACT FINAL CTA
+================================= -->
+<section class="contact-final-cta reveal">
+
+    <div class="contact-final-cta-content">
+
+        <p class="section-label">
+            YOUR ADVENTURE STARTS HERE
+        </p>
+
+        <h2>
+            READY TO
+            <span>MAKE MEMORIES?</span>
+        </h2>
+
+        <p>
+            From thrilling adventures and outdoor
+            experiences to delicious food and peaceful
+            moments in nature, your Arena experience
+            is waiting for you.
+        </p>
+
+        <div class="contact-final-buttons">
+
+            <a
+                href="booking.html"
+                class="contact-final-primary"
+            >
+                BOOK YOUR ADVENTURE
+            </a>
+
+            <a
+                href="activities.html"
+                class="contact-final-secondary"
+            >
+                EXPLORE ACTIVITIES
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    </main>
+
+    <!-- =================================
+     PREMIUM FOOTER
+================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                <span>ARENA</span>
+                <small>ADVENTURES SPORTS</small>
+            </a>
+
+            <p>
+                Enter the world of thrill.
+                Discover the joy of adventure.
+            </p>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="YouTube">YT</a>
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>EXPLORE</h3>
+
+            <a href="index.html">Home</a>
+            <a href="activities.html">Activities</a>
+            <a href="food.html">Food & Dining</a>
+            <a href="fishing.html">Fishing</a>
+            <a href="garden.html">Garden</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>DISCOVER</h3>
+
+            <a href="gallery.html">Gallery</a>
+            <a href="booking.html">Book Now</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>GET IN TOUCH</h3>
+
+            <p>
+                Arena Adventures Sports
+            </p>
+
+            <a href="tel:+910000000000">
+                +91 00000 00000
+            </a>
+
+            <a href="mailto:info@example.com">
+                info@example.com
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Arena Adventures Sports.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Adventure. Experience. Memories.
+        </p>
+
+    </div>
+
+</footer>
+
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>
