@@ -585,6 +585,54 @@
 
 </section>
 
+
+<section class="booking-summary-section">
+    <div class="booking-summary-container">
+
+        <div class="booking-summary-heading reveal">
+            <p class="section-label">YOUR EXPERIENCE</p>
+
+            <h2>
+                YOUR
+                <span>SELECTION.</span>
+            </h2>
+
+            <p>
+                Review the experiences you have selected
+                for your visit before sending your booking
+                request.
+            </p>
+        </div>
+
+        <div class="booking-summary-box reveal">
+
+            <div class="booking-summary-empty" id="bookingSummaryEmpty">
+                <span class="booking-summary-icon">+</span>
+
+                <h3>NO ACTIVITIES SELECTED</h3>
+
+                <p>
+                    Select one or more experiences above
+                    and they will appear here.
+                </p>
+
+                <a href="#bookingActivities" class="booking-summary-button">
+                    CHOOSE ACTIVITIES
+                    <span>↑</span>
+                </a>
+            </div>
+
+             <div class="booking-summary-count" id="bookingSummaryCount">
+               0 EXPERIENCES SELECTED
+             </div>
+
+            <div class="booking-summary-selected" id="bookingSummarySelected"></div>
+
+        </div>
+
+    </div>
+</section>
+
 <!-- =================================
      BOOKING DETAILS FORM
 ================================= -->
@@ -617,6 +665,33 @@
             class="booking-details-form reveal"
             id="bookingForm"
         >
+
+         <div class="booking-selected-form-section">
+    <div class="booking-form-section-title">
+        <span>00</span>
+        <h3>SELECTED EXPERIENCES</h3>
+    </div>
+
+    <div
+        class="booking-form-selected-list"
+        id="bookingFormSelectedList"
+    >
+        <p class="booking-form-no-selection">
+            No experiences selected yet.
+        </p>
+    </div>
+</div>
+
+<div
+    class="booking-experience-status"
+    id="bookingExperienceStatus"
+>
+    <span class="booking-status-dot"></span>
+
+    <span id="bookingExperienceStatusText">
+        SELECT AN EXPERIENCE TO CONTINUE
+    </span>
+</div>
 
 
             <!-- PERSONAL DETAILS -->
@@ -864,6 +939,37 @@
 
             </div>
 
+            <!-- BOOKING DURATION -->
+<div class="booking-form-group">
+
+    <label for="bookingDuration">BOOKING DURATION</label>
+
+    <select id="bookingDuration" name="duration" required>
+
+        <option value="" selected disabled>
+            Select duration
+        </option>
+
+        <option value="10">10 Minutes — ₹100 / person</option>
+        <option value="20">20 Minutes — ₹180 / person</option>
+        <option value="30">30 Minutes — ₹250 / person</option>
+        <option value="40">40 Minutes — ₹330 / person</option>
+        <option value="50">50 Minutes — ₹415 / person</option>
+
+        <option value="60">1 Hour — ₹499 / person</option>
+
+        <option value="70">1 Hour 10 Minutes — ₹580 / person</option>
+        <option value="80">1 Hour 20 Minutes — ₹660 / person</option>
+        <option value="90">1 Hour 30 Minutes — ₹745 / person</option>
+        <option value="100">1 Hour 40 Minutes — ₹830 / person</option>
+        <option value="110">1 Hour 50 Minutes — ₹915 / person</option>
+
+        <option value="120">2 Hours — ₹998 / person</option>
+
+    </select>
+
+</div>
+
 
             <!-- SPECIAL REQUIREMENTS -->
 
@@ -892,6 +998,60 @@
                 ></textarea>
 
             </div>
+
+            <!-- LIVE PRICE CALCULATOR -->
+<div class="booking-price-calculator" id="bookingPriceCalculator">
+
+    <div class="booking-price-heading">
+        <span>PRICE SUMMARY</span>
+        <h3>YOUR <strong>ADVENTURE TOTAL.</strong></h3>
+    </div>
+
+    <div class="booking-price-details">
+
+        <div class="booking-price-row">
+            <span>Selected Experiences</span>
+            <strong id="priceActivities">0</strong>
+        </div>
+
+        <div class="booking-price-row">
+            <span>Visitors</span>
+            <strong id="priceVisitors">0</strong>
+        </div>
+
+        <div class="booking-price-row">
+            <span>Duration</span>
+            <strong id="priceDuration">—</strong>
+        </div>
+
+        <div class="booking-price-row">
+            <span>Base Total</span>
+            <strong id="priceBaseTotal">₹0</strong>
+        </div>
+
+        <div class="booking-price-row booking-discount-row" id="bookingDiscountRow">
+            <span>Group Discount</span>
+            <strong id="priceDiscount">- ₹0</strong>
+        </div>
+
+    </div>
+
+    <div class="booking-price-total">
+
+        <span>FINAL TOTAL</span>
+
+        <strong id="priceFinalTotal">
+            ₹0
+        </strong>
+
+    </div>
+
+    <p class="booking-price-note">
+        Prices are calculated according to your selected
+        experiences, visitors and booking duration.
+    </p>
+
+</div>
 
 
             <!-- SUBMIT -->
@@ -956,48 +1116,6 @@
 
 </section>
 
-<section class="booking-summary-section">
-    <div class="booking-summary-container">
-
-        <div class="booking-summary-heading reveal">
-            <p class="section-label">YOUR EXPERIENCE</p>
-
-            <h2>
-                YOUR
-                <span>SELECTION.</span>
-            </h2>
-
-            <p>
-                Review the experiences you have selected
-                for your visit before sending your booking
-                request.
-            </p>
-        </div>
-
-        <div class="booking-summary-box reveal">
-
-            <div class="booking-summary-empty" id="bookingSummaryEmpty">
-                <span class="booking-summary-icon">+</span>
-
-                <h3>NO ACTIVITIES SELECTED</h3>
-
-                <p>
-                    Select one or more experiences above
-                    and they will appear here.
-                </p>
-
-                <a href="#bookingActivities" class="booking-summary-button">
-                    CHOOSE ACTIVITIES
-                    <span>↑</span>
-                </a>
-            </div>
-
-            <div class="booking-summary-selected" id="bookingSummarySelected"></div>
-
-        </div>
-
-    </div>
-</section>
 
     </main>
 

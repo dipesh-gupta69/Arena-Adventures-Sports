@@ -73,6 +73,19 @@ const bookingSummarySelected = document.querySelector(
     "#bookingSummarySelected"
 );
 
+const bookingExperienceStatus =
+    document.querySelector("#bookingExperienceStatus");
+
+const bookingExperienceStatusText =
+    document.querySelector("#bookingExperienceStatusText");
+
+const bookingFormSelectedList =
+    document.querySelector("#bookingFormSelectedList");
+
+const bookingSummaryCount =
+    document.querySelector("#bookingSummaryCount");
+
+
 let selectedActivities = [];
 
 bookingActivityCards.forEach(function (card) {
@@ -111,16 +124,61 @@ bookingActivityCards.forEach(function (card) {
 
 function updateBookingSummary() {
 
+    if (
+        bookingExperienceStatus &&
+        bookingExperienceStatusText
+    ) {
+
+        if (selectedActivities.length === 0) {
+
+            bookingExperienceStatus.classList.remove(
+                "ready"
+            );
+
+            bookingExperienceStatusText.textContent =
+                "SELECT AN EXPERIENCE TO CONTINUE";
+
+        } else {
+
+            const count =
+                selectedActivities.length;
+
+            bookingExperienceStatus.classList.add(
+                "ready"
+            );
+
+            bookingExperienceStatusText.textContent =
+                `${count} ${
+                    count === 1
+                        ? "EXPERIENCE"
+                        : "EXPERIENCES"
+                } READY FOR BOOKING`;
+
+        }
+
+    }
+
     if (selectedActivities.length === 0) {
 
         bookingSummaryEmpty.style.display = "block";
 
         bookingSummarySelected.innerHTML = "";
 
+        bookingSummaryCount.classList.remove("show");
+
+
         return;
     }
 
     bookingSummaryEmpty.style.display = "none";
+
+    bookingSummaryCount.classList.add("show");
+
+    const count = selectedActivities.length;
+
+    bookingSummaryCount.textContent =
+        `${count} ${count === 1 ? "EXPERIENCE" : "EXPERIENCES"} SELECTED`;
+
 
     bookingSummarySelected.innerHTML = "";
 
@@ -132,8 +190,18 @@ function updateBookingSummary() {
             "booking-selected-item";
 
         selectedItem.innerHTML = `
+        <div class="booking-selected-info">
             <span class="booking-selected-check">✓</span>
             <span>${activity}</span>
+             </div>
+
+             <button
+            type="button"
+            class="booking-remove-button"
+            data-activity="${activity}"
+             >
+             REMOVE
+            </button>
         `;
 
         bookingSummarySelected.appendChild(
@@ -141,6 +209,88 @@ function updateBookingSummary() {
         );
 
     });
+
+    const removeButtons =
+    bookingSummarySelected.querySelectorAll(
+        ".booking-remove-button"
+    );
+
+removeButtons.forEach(function (button) {
+
+    button.addEventListener(
+        "click",
+        function () {
+
+            const activityToRemove =
+                button.dataset.activity;
+
+            selectedActivities =
+                selectedActivities.filter(
+                    function (activity) {
+                        return activity !== activityToRemove;
+                    }
+                );
+
+            bookingActivityCards.forEach(
+                function (card) {
+
+                    if (
+                        card.dataset.activity ===
+                        activityToRemove
+                    ) {
+                        card.classList.remove(
+                            "selected"
+                        );
+                    }
+
+                }
+            );
+
+            updateBookingSummary();
+
+        }
+    );
+
+});
+
+if (bookingFormSelectedList) {
+
+    bookingFormSelectedList.innerHTML = "";
+
+    if (selectedActivities.length === 0) {
+
+        bookingFormSelectedList.innerHTML = `
+            <p class="booking-form-no-selection">
+                No experiences selected yet.
+            </p>
+        `;
+
+    } else {
+
+        selectedActivities.forEach(function (activity) {
+
+            const selectedFormItem =
+                document.createElement("div");
+
+            selectedFormItem.className =
+                "booking-form-selected-item";
+
+            selectedFormItem.innerHTML = `
+                <span class="booking-form-selected-check">✓</span>
+                <span>${activity}</span>
+            `;
+
+            bookingFormSelectedList.appendChild(
+                selectedFormItem
+            );
+
+        });
+
+    }
+
+}
+
+updateBookingPrice();
 
 }
 
@@ -151,6 +301,129 @@ function updateBookingSummary() {
 const bookingForm = document.querySelector("#bookingForm");
 const bookingDate = document.querySelector("#bookingDate");
 const bookingPhone = document.querySelector("#bookingPhone");
+
+// =================================
+// LIVE BOOKING PRICE CALCULATOR
+// =================================
+
+const bookingVisitors = document.querySelector("#bookingVisitors");
+const bookingDuration = document.querySelector("#bookingDuration");
+
+const priceActivities = document.querySelector("#priceActivities");
+const priceVisitors = document.querySelector("#priceVisitors");
+const priceDuration = document.querySelector("#priceDuration");
+const priceBaseTotal = document.querySelector("#priceBaseTotal");
+const priceDiscount = document.querySelector("#priceDiscount");
+const priceFinalTotal = document.querySelector("#priceFinalTotal");
+const bookingDiscountRow = document.querySelector("#bookingDiscountRow");
+
+const durationPrices = {
+    10: 100,
+    20: 180,
+    30: 250,
+    40: 330,
+    50: 415,
+    60: 499,
+    70: 580,
+    80: 660,
+    90: 745,
+    100: 830,
+    110: 915,
+    120: 998
+};
+
+function updateBookingPrice() {
+
+    if (
+        !priceActivities ||
+        !priceVisitors ||
+        !priceDuration ||
+        !priceBaseTotal ||
+        !priceDiscount ||
+        !priceFinalTotal
+    ) {
+        return;
+    }
+
+    const activityCount = selectedActivities.length;
+    const visitorValue = bookingVisitors ? bookingVisitors.value : "";
+    const durationValue = bookingDuration ? bookingDuration.value : "";
+
+    const visitors = parseInt(visitorValue, 10);
+    const durationPrice = durationPrices[durationValue];
+
+    priceActivities.textContent = activityCount;
+    priceVisitors.textContent = Number.isNaN(visitors) ? "0" : visitors;
+
+    if (durationValue && durationPrice) {
+        const durationOption =
+            bookingDuration.options[bookingDuration.selectedIndex];
+
+        priceDuration.textContent =
+            durationOption.textContent.split(" — ")[0];
+    } else {
+        priceDuration.textContent = "—";
+    }
+
+    if (
+        activityCount === 0 ||
+        Number.isNaN(visitors) ||
+        !durationValue ||
+        !durationPrice
+    ) {
+        priceBaseTotal.textContent = "₹0";
+        priceDiscount.textContent = "- ₹0";
+        priceFinalTotal.textContent = "₹0";
+
+        if (bookingDiscountRow) {
+            bookingDiscountRow.style.display = "flex";
+        }
+
+        return;
+    }
+
+    const baseTotal =
+        activityCount * visitors * durationPrice;
+
+    let discount = 0;
+
+    if (visitors >= 4) {
+        discount = baseTotal * 0.25;
+    }
+
+    const finalTotal = baseTotal - discount;
+
+    priceBaseTotal.textContent =
+        `₹${baseTotal.toLocaleString("en-IN")}`;
+
+    priceDiscount.textContent =
+        `- ₹${discount.toLocaleString("en-IN")}`;
+
+    priceFinalTotal.textContent =
+        `₹${finalTotal.toLocaleString("en-IN")}`;
+
+    if (bookingDiscountRow) {
+        if (visitors >= 4) {
+            bookingDiscountRow.style.display = "flex";
+        } else {
+            bookingDiscountRow.style.display = "none";
+        }
+    }
+}
+
+if (bookingVisitors) {
+    bookingVisitors.addEventListener(
+        "change",
+        updateBookingPrice
+    );
+}
+
+if (bookingDuration) {
+    bookingDuration.addEventListener(
+        "change",
+        updateBookingPrice
+    );
+}
 
 
 // Prevent past dates
