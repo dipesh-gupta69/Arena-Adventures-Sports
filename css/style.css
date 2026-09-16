@@ -11163,56 +11163,6 @@ body {
     }
 
 }
-Finally, update JavaScript
-
-Inside your script.js, near:
-
-const bookingSummarySelected =
-    document.querySelector("#bookingSummarySelected");
-
-add:
-
-const bookingFormSelectedList =
-    document.querySelector("#bookingFormSelectedList");
-
-Then at the end of updateBookingSummary(), after your remove-button code, add:
-
-if (bookingFormSelectedList) {
-
-    bookingFormSelectedList.innerHTML = "";
-
-    if (selectedActivities.length === 0) {
-
-        bookingFormSelectedList.innerHTML = `
-            <p class="booking-form-no-selection">
-                No experiences selected yet.
-            </p>
-        `;
-
-    } else {
-
-        selectedActivities.forEach(function (activity) {
-
-            const selectedFormItem =
-                document.createElement("div");
-
-            selectedFormItem.className =
-                "booking-form-selected-item";
-
-            selectedFormItem.innerHTML = `
-                <span class="booking-form-selected-check">✓</span>
-                <span>${activity}</span>
-            `;
-
-            bookingFormSelectedList.appendChild(
-                selectedFormItem
-            );
-
-        });
-
-    }
-
-}
 
 /* =================================
    BOOKING EXPERIENCE STATUS
@@ -11269,4 +11219,16 @@ if (bookingFormSelectedList) {
         letter-spacing: 1px;
     }
 
+}
+
+/* PRICE CALCULATOR EMPTY MESSAGE */
+
+.booking-price-empty-message {
+    margin: 0 0 20px;
+    padding: 12px 15px;
+    background: rgba(243, 156, 18, 0.08);
+    border-left: 3px solid #f39c12;
+    color: #bbbbbb;
+    font-size: 0.75rem;
+    line-height: 1.6;
 }

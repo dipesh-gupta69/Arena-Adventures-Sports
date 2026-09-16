@@ -166,6 +166,16 @@ function updateBookingSummary() {
 
         bookingSummaryCount.classList.remove("show");
 
+        if (bookingFormSelectedList) {
+        bookingFormSelectedList.innerHTML = `
+            <p class="booking-form-no-selection">
+                No experiences selected yet.
+            </p>
+        `;
+    }
+
+    updateBookingPrice();
+
 
         return;
     }
@@ -289,8 +299,8 @@ if (bookingFormSelectedList) {
     }
 
 }
-
-updateBookingPrice();
+    //update live price
+   updateBookingPrice();
 
 }
 
@@ -316,6 +326,8 @@ const priceBaseTotal = document.querySelector("#priceBaseTotal");
 const priceDiscount = document.querySelector("#priceDiscount");
 const priceFinalTotal = document.querySelector("#priceFinalTotal");
 const bookingDiscountRow = document.querySelector("#bookingDiscountRow");
+const bookingPriceEmptyMessage =
+    document.querySelector("#bookingPriceEmptyMessage");
 
 const durationPrices = {
     10: 100,
@@ -366,21 +378,27 @@ function updateBookingPrice() {
     }
 
     if (
-        activityCount === 0 ||
-        Number.isNaN(visitors) ||
-        !durationValue ||
-        !durationPrice
-    ) {
-        priceBaseTotal.textContent = "₹0";
-        priceDiscount.textContent = "- ₹0";
-        priceFinalTotal.textContent = "₹0";
+    activityCount === 0 ||
+    Number.isNaN(visitors) ||
+    visitors < 1 ||
+    !durationValue ||
+    !durationPrice
+) {
 
-        if (bookingDiscountRow) {
-            bookingDiscountRow.style.display = "flex";
-        }
+    priceBaseTotal.textContent = "₹0";
+    priceDiscount.textContent = "- ₹0";
+    priceFinalTotal.textContent = "₹0";
 
-        return;
+    if (bookingDiscountRow) {
+        bookingDiscountRow.style.display = "none";
     }
+
+    if (bookingPriceEmptyMessage) {
+        bookingPriceEmptyMessage.style.display = "block";
+    }
+
+    return;
+}
 
     const baseTotal =
         activityCount * visitors * durationPrice;
@@ -392,6 +410,10 @@ function updateBookingPrice() {
     }
 
     const finalTotal = baseTotal - discount;
+
+    if (bookingPriceEmptyMessage) {
+    bookingPriceEmptyMessage.style.display = "none";
+}
 
     priceBaseTotal.textContent =
         `₹${baseTotal.toLocaleString("en-IN")}`;
@@ -412,10 +434,20 @@ function updateBookingPrice() {
 }
 
 if (bookingVisitors) {
-    bookingVisitors.addEventListener(
-        "change",
-        updateBookingPrice
-    );
+
+    bookingVisitors.addEventListener("input", function () {
+
+        // Remove everything except numbers
+        this.value = this.value.replace(/[^0-9]/g, "");
+
+        // Don't allow 0
+        if (this.value === "0") {
+            this.value = "";
+        }
+
+        updateBookingPrice();
+    });
+
 }
 
 if (bookingDuration) {

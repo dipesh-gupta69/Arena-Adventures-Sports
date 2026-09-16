@@ -773,61 +773,16 @@
                         NUMBER OF VISITORS
                     </label>
 
-                    <select
-                        id="bookingVisitors"
-                        name="visitors"
-                        required
-                    >
-
-                        <option
-                            value=""
-                            selected
-                            disabled
+                   <input
+                   type="number"
+                    id="bookingVisitors"
+                     name="visitors"
+                     placeholder="Enter number of people"
+                      min="1"
+                       step="1"
+                       required
                         >
-                            Select visitors
-                        </option>
-
-                        <option value="1">
-                            1 Person
-                        </option>
-
-                        <option value="2">
-                            2 People
-                        </option>
-
-                        <option value="3">
-                            3 People
-                        </option>
-
-                        <option value="4">
-                            4 People
-                        </option>
-
-                        <option value="5">
-                            5 People
-                        </option>
-
-                        <option value="6">
-                            6 People
-                        </option>
-
-                        <option value="7">
-                            7 People
-                        </option>
-
-                        <option value="8">
-                            8 People
-                        </option>
-
-                        <option value="9">
-                            9 People
-                        </option>
-
-                        <option value="10+">
-                            10+ People
-                        </option>
-
-                    </select>
+ 
 
                 </div>
 
@@ -1002,6 +957,10 @@
             <!-- LIVE PRICE CALCULATOR -->
 <div class="booking-price-calculator" id="bookingPriceCalculator">
 
+    <p class="booking-price-empty-message" id="bookingPriceEmptyMessage">
+    Select your experience, number of visitors and duration to see your price.
+</p>
+
     <div class="booking-price-heading">
         <span>PRICE SUMMARY</span>
         <h3>YOUR <strong>ADVENTURE TOTAL.</strong></h3>
@@ -1030,7 +989,7 @@
         </div>
 
         <div class="booking-price-row booking-discount-row" id="bookingDiscountRow">
-            <span>Group Discount</span>
+            <span>25% Group Discount</span>
             <strong id="priceDiscount">- ₹0</strong>
         </div>
 
