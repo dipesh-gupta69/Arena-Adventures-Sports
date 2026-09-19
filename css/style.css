@@ -171,7 +171,7 @@ body {
             rgba(0, 0, 0, 0.25),
             rgba(0, 0, 0, 0.45)
         ),
-        url("../images/hero1.jpg");
+        url("../images/homehero.jpg");
 
         background-size: cover;
         background-position: center;
@@ -647,7 +647,7 @@ body {
         rgba(0, 0, 0, 0.10),
         rgba(0, 0, 0, 0.90)
     ),
-    url("../images/food.png");
+    url("../images/moreadventure.png");
 
     background-size: cover;
     background-position: center;
@@ -1071,7 +1071,7 @@ body {
             rgba(0, 0, 0, 0.55),
             rgba(0, 0, 0, 0.20)
         ),
-        url("../images/hero.png");
+        url("../images/foodhero.jpg");
 
     background-size: cover;
     background-position: center;
@@ -1500,7 +1500,7 @@ body {
             rgba(0, 0, 0, 0.58),
             rgba(0, 0, 0, 0.18)
         ),
-        url("../images/food.jpg");
+        url("../images/foodhero.jpg");
 
     background-size: cover;
     background-position: center;
@@ -1753,7 +1753,7 @@ body {
             rgba(0, 0, 0, 0.58),
             rgba(0, 0, 0, 0.18)
         ),
-        url("../images/food.png");
+        url("../images/food.jpg");
 
     background-size: 100%;
     background-position: center;
@@ -1827,7 +1827,7 @@ body {
             rgba(0, 0, 0, 0.82),
             rgba(0, 0, 0, 0.82)
         ),
-        url("../images/hero.jpg");
+        url("../images/homefoot.jpg");
 
     background-size: cover;
     background-position: center;
@@ -2329,7 +2329,7 @@ body {
             rgba(0, 0, 0, 0.55),
             rgba(0, 0, 0, 0.78)
         ),
-        url("../images/hero.jpg");
+        url("../images/activitieshero.png");
 
     background-size: cover;
     background-position: center;
@@ -2979,7 +2979,7 @@ body {
 
 .more-adventures-activity {
     background-image:
-        url("../images/hero.png");
+        url("../images/moreadventure.png");
 }
 
 
@@ -3205,7 +3205,7 @@ body {
                 rgba(0, 0, 0, 0.48),
                 rgba(0, 0, 0, 0.68)
             ),
-            url("../images/hero.jpg");
+            url("../images/activitieshero.png");
 
         background-size: cover;
         background-position: center center;
@@ -3261,7 +3261,7 @@ body {
                 rgba(0, 0, 0, 0.45),
                 rgba(0, 0, 0, 0.70)
             ),
-            url("../images/hero.jpg");
+            url("../images/activitieshero.png");
 
         background-size: cover !important;
         background-position: center center !important;
@@ -3699,7 +3699,7 @@ body {
             rgba(0, 0, 0, 0.48),
             rgba(0, 0, 0, 0.72)
         ),
-        url("../images/food.jpg");
+        url("../images/foodhero.jpg");
 
     background-size: cover;
     background-position: center;
@@ -3773,7 +3773,7 @@ body {
                 rgba(0, 0, 0, 0.45),
                 rgba(0, 0, 0, 0.70)
             ),
-            url("../images/food.jpg");
+            url("../images/foodhero.jpg");
 
         background-size: cover;
         background-position: center center;
@@ -3969,13 +3969,13 @@ body {
 
 .vegetarian-card {
     background-image:
-        url("../images/food.jpg");
+        url("../images/vegetarian.jpg");
 }
 
 
 .non-vegetarian-card {
     background-image:
-        url("../images/food.jpg");
+        url("../images/nonveg.jpg");
 }
 
 
@@ -4532,7 +4532,7 @@ body {
             rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.75)
         ),
-        url("../images/fishing.jpg");
+        url("../images/fishing&harvesting.jpg");
 
     background-size: cover;
     background-position: center;
@@ -4606,7 +4606,7 @@ body {
                 rgba(0, 0, 0, 0.45),
                 rgba(0, 0, 0, 0.72)
             ),
-            url("../images/fishing.jpg");
+            url("../images/fishing&harvesting.jpg");
 
         background-size: cover;
 
@@ -5342,7 +5342,7 @@ body {
             rgba(0, 0, 0, 0.80),
             rgba(0, 0, 0, 0.92)
         ),
-        url("../images/fishing.jpg");
+        url("../images/selffishing.jpg");
 
     background-size: cover;
 
@@ -5523,7 +5523,7 @@ body {
                 rgba(0, 0, 0, 0.78),
                 rgba(0, 0, 0, 0.93)
             ),
-            url("../images/fishing.jpg");
+            url("../images/selffishing.jpg");
 
         background-size: cover;
 
@@ -5585,7 +5585,7 @@ body {
             rgba(0, 0, 0, 0.40),
             rgba(0, 0, 0, 0.72)
         ),
-        url("../images/garden.jpg");
+        url("../images/gardenhero.jpg");
 
     background-size: cover;
 
@@ -5675,7 +5675,7 @@ body {
                 rgba(0, 0, 0, 0.45),
                 rgba(0, 0, 0, 0.72)
             ),
-            url("../images/garden.jpg");
+            url("../images/gardenhero.jpg");
 
         background-size: cover;
 
@@ -6309,7 +6309,7 @@ body {
             rgba(0, 0, 0, 0.78) 45%,
             rgba(0, 0, 0, 0.38) 100%
         ),
-        url("../images/garden.jpg");
+        url("../images/gardenactivity.jpg");
 
     background-size: cover;
     background-position: center;
@@ -6490,7 +6490,7 @@ body {
                 rgba(0, 0, 0, 0.78),
                 rgba(0, 0, 0, 0.92)
             ),
-            url("../images/garden.jpg");
+            url("../images/gardenactivity.jpg");
 
         background-size: cover;
 
@@ -6803,7 +6803,7 @@ body {
             rgba(0, 0, 0, 0.42),
             rgba(0, 0, 0, 0.74)
         ),
-        url("../images/hero.jpg");
+        url("../images/galleryhero.jpg");
 
     background-size: cover;
 
@@ -6894,7 +6894,7 @@ body {
                 rgba(0, 0, 0, 0.45),
                 rgba(0, 0, 0, 0.72)
             ),
-            url("../images/hero.jpg");
+            url("../images/galleryhero.jpg");
 
         background-size: cover;
 
@@ -7870,7 +7870,7 @@ body {
             rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.75)
         ),
-        url("../images/hero.jpg");
+        url("../images/contacthero.jpg");
 
     background-size: cover;
 
@@ -7962,7 +7962,7 @@ body {
                 rgba(0, 0, 0, 0.48),
                 rgba(0, 0, 0, 0.76)
             ),
-            url("../images/hero.jpg");
+            url("../images/contacthero.jpg");
 
         background-size: cover;
 
